@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BRO PAGE</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 class="request_header">JOIN THE BROMMUNITY!</h1>
+    <div style="display:flex; justify-content: center;">
+        <img src="{% static 'png/BRO-logos_black_knuckles.png' %}" style="width: 150px; height: auto;">
+    </div>
+        <h3 class="request_description">Before becoming a fellow Bro, you need to first be accepted. Please fill out the following information.</h3>
+    <br>
+    <div class="request_form">
+        <form action="/permission" method="post">
+            {% csrf_token %}
+            <div class="column">
+                <label for="">First Name</label>
+                <br>
+                <div class="req_col1">
+                    <input type="text" id="fname" name="fname" placeholder="Enter Your First Name" Required>
+                </div>
+                <br>
+            </div>
+            
+            <div class="column">
+                <label for="">Last Name</label>
+                <br>
+                <input type="text" id="lname" name="lname" placeholder="Enter Your Last Name" Required>
+                <br>
+            </div>
+
+            <label>Email Address</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email Address" Required>
+            <br>
+
+            <label>Any Bro's Refer You? (If so, who?)</label>
+            <br>
+            <input type="text" id="referred" name="referred" placeholder="Enter Who Referred You">
+            <br>
+
+            <label>Favorite Sports Team</label>
+            <br>
+            <input type="text" id="sports" name="sports" placeholder="Enter Your Favorite Team" Required>
+            <br>
+            <br>
+
+            <button class="request_button" type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <br><br>
+    
+</body>
+</html>

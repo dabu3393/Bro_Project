@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BRO PAGE</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <img src="{% static 'png/BRO-logos_white.png' %}" style="width:100%; min-width: 80%;">
+        </div>
+        <div class="column" id="col2">
+            <h1>CONNECT WITH YOUR BRO'S</h1>
+            <form action="/signin" method="post">
+            {% csrf_token %}
+                <input type="text" id="username" name="username" placeholder="USERNAME" Required>
+                <input type="password" id="pass1" name="pass1" placeholder="PASSWORD" Required>
+                <button type="submit">LOG IN</button>
+            </form>
+            <h2>NOT A BRO?</h2>
+            <form>
+                <button type="submit"><a href="/permission">REQUEST A BROHOOD INVITE</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

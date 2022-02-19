@@ -1,0 +1,145 @@
+body {
+  background-color: #5a4ae3;
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+
+.request_header {
+  text-align: center;
+  font-size: 45px;
+}
+
+.request_description {
+  text-align: center;
+  font-size: 25px;
+}
+
+.request_form {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 5px 5px 30px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  margin-left: 12%;
+  margin-right: 12%;
+  width: 70%;
+}
+
+.request_form input[type=text] {
+  width: 100%;
+  background-color: #20203027;
+  color: black;
+}
+
+.req_col1 {
+  width: 97%;
+}
+
+.request_form input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #20203027;
+  color: black;
+}
+
+.request_form input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: #20203027;
+  color: black;
+}
+
+::placeholder {
+  color: #202030;
+}
+
+.header_column {
+  float: left;
+  width: 33.33%;
+  display:flex; 
+  padding-top: 20px;
+}
+
+.header_column img {
+  width: 70px;
+  height: auto;
+}
+
+.column {
+    float:left;
+    width: 50%;
+    height: 80px;
+}
+
+.column h1 {
+    color: white;
+    width: 80%;
+    font-size: 2.6vw;
+    text-align: center;
+}
+
+.column h2 {
+    color: white;
+    width: 80%;
+    font-size: 2.0vw;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=password] {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button {
+  font-size: 1.4vw;
+  width: 80%;
+  padding: 12px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+.request_button {
+  width: 100%;
+  font-size: 16px;
+}
+
+#col2 {
+    padding: 10% 0;
+}
