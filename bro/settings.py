@@ -36,7 +36,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = [
-    "/Users/davisburrill/Desktop/Bro/static",
+    "/Users/davisburrill/Desktop/Python_Projects/Bro_Project/static",
 ]
 
 
