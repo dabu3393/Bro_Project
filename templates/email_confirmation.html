@@ -1,0 +1,10 @@
+{% autoescape off %}
+Hello {{ name }},
+
+We are so happy to have you join our community! To get started, please verify your email by pressing the button below...
+
+Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Welcome to Bro!
+The BRO Team
+{% endautoescape %}
