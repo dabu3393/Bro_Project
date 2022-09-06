@@ -27,11 +27,12 @@ def signup(request):
         pass2 = request.POST['pass2']
 
         if User.objects.filter(username=username):
-            messages.error(request, "Username already exists! Please try another username.")
             return redirect('signup')
+            
 
         if pass1 != pass2:
             messages.error(request, "Passwords didn't match!")
+            return redirect('signup')
 
         user = User.objects.get(username = email)
         user.username = username
@@ -43,14 +44,6 @@ def signup(request):
 
 
         messages.success(request, "Your account has been successfully created")
-
-        # Welcome Email
-
-        subject = "Welcome to BRO!"
-        message = "Hello " + username + "!! \nWelcome to BRO! You should recieve another email from us asking to confirm your email."
-        from_email = settings.EMAIL_HOST_USER
-        to_list = [email]
-        send_mail(subject, message, from_email, to_list, fail_silently=True)
 
         # Confirmation Email
 
@@ -72,7 +65,7 @@ def signup(request):
         email.fail_silently = True
         email.send()
 
-        return redirect('home')
+        return redirect('check_email')
 
 
 
@@ -90,10 +83,12 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
+            messages.success(request, "You've logged in successfully!")
             return render(request, "authentication/signin.html")
 
         else:
             messages.error(request, "The user name and/or password is incorrect")
+            return render(request, "authentication/index.html")
 
 
 def permission(request):
@@ -132,6 +127,9 @@ def signout(request):
 
 def successful(request):
     return render(request, "authentication/successful.html")
+
+def check_email(request):
+    return render(request, "authentication/check_email.html")
 
 def activate(request, uidb64, token):
     try:
